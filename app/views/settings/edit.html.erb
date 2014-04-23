@@ -1,0 +1,33 @@
+<%= form_for @user,:url => setting_path(@user),:method => :put do |f| %>
+<%= f.error_messages %>
+  <table>
+    <tr>
+      <td>Real Name:</td>
+      <td><%= f.text_field :real_name %></td>
+    </tr>
+    <tr>
+      <td>Position Title:</td>
+      <td><%= f.text_field :position_title %></td>
+    </tr>
+    <tr>
+      <td>Section:</td>
+      <td><%= f.text_field :section %></td>
+    </tr>
+    <tr>
+      <td>Company Name:</td>
+      <td><%= f.text_field :company_name %></td>
+    </tr>
+    <tr>
+      <td>Company Telephone:</td>
+      <td><%= f.text_field :company_tel %></td>
+    </tr>
+    <tr>
+      <td>Company Email:</td>
+      <td><%= f.text_field :company_email %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= f.submit "Update",:class => "btn btn-success" %></td>
+    </tr>
+  </table>
+<% end %>
